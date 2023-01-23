@@ -1,7 +1,9 @@
 import React from "react";
 import { IconType } from "react-icons";
-import { useTheme } from "next-themes";
+import { useTheme } from 'next-themes';
 import Switcher from "@/components/UI/switcher/Switcher";
+
+import useLanguage from "../../hooks/useLanguage"
 interface Props {
   theme: string;
   currentTheme?: string;
@@ -9,12 +11,12 @@ interface Props {
 }
 const ThemeToggler: React.FC<Props> = ({ theme, Icon, currentTheme }) => {
   const { setTheme } = useTheme();
-
+  const {c}  = useLanguage()
   return (
-        <Switcher title={theme === "dark" ? "light" : "dark"} 
+        <Switcher title={c.darkMode} 
         element={<div
             className={` flex items-center justify-start  ${
-              currentTheme && currentTheme === theme ? "font-bold" : ""
+              currentTheme && currentTheme === theme ? "font-bolder" : ""
             }`}
             onClick={() => setTheme(theme)}
           >

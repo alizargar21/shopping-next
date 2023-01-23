@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import myLogo from "../../images/logo/logo.png";
+import myLogo from "/public/images/logo/logo.png";
 import { BsPersonCircle, BsCartCheck } from "react-icons/bs";
 import useLanguage from "../../hooks/useLanguage";
 import Settings from "../setting/Setting";

@@ -4,19 +4,18 @@ import LangItem from "./LangItem";
 import { useDispatch } from "react-redux";
 import { settingActions } from "../../features/settingSlice";
 const Language = () => {
-  const {  locale } = useLanguage();
+  const { c, locale } = useLanguage();
     const dispatch = useDispatch()
   useEffect(() => {
     document.documentElement.dir = locale === "eng" ? "ltr" : "rtl"
-    console.log(locale);
+   
     }, [locale]);
  
   return (<>
       <div>
-        <LangItem language="eng" closeHandler={() => dispatch(settingActions.closeSetting())} />
+        <h4>{c.language}</h4>
         <LangItem language="fa" closeHandler={() => dispatch(settingActions.closeSetting())} />
-
- 
+        <LangItem language="eng" closeHandler={() => dispatch(settingActions.closeSetting())} />
 
       </div>
   </>);

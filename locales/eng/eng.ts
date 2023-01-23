@@ -4,7 +4,10 @@ const eng : {[key : string] : string} = {
       supports : "Supports",
       aboutUs : "About Us",
       fa:"Fa - فارسی",
-      eng : "Eng - English"
+      eng : "Eng - English",
+      language : "Language",
+      darkMode : "Dark Mode",
+      lightMode : "Light Mode"
 }
 
 export default eng

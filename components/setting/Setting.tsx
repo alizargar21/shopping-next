@@ -12,8 +12,9 @@ const Settings = () => {
   const isSetting = useSelector(
     (state: SettingRootState) => state.setting.isOpen
   );
-  function toggleShowSetting() {
-    dispatch(settingActions.toggleSetting());
+
+  function onOpenSetting() {
+    dispatch(settingActions.openSetting());
   }
 
   function onCloseSetting() {
@@ -22,7 +23,7 @@ const Settings = () => {
 
   return (
     <div className="relative z-[150] flex items-center justify-between ">
-      <div onClick={toggleShowSetting}>
+      <div onClick={onOpenSetting}>
         <AiOutlineSetting style={{ fontSize: "1.5rem" }} />
       </div>
       {isSetting ? (

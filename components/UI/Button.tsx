@@ -2,11 +2,11 @@ import React from 'react'
 type props = {
       title : string,
       onClick? : ()=> void,
-      className : string
+      className : string ,
 }
-const Button = ({title , className} : props) => {
+const Button = ({title , className , onClick} : props) => {
   return (
-    <button className={className}>{title}</button>
+    <button className={className} onClick={onClick}>{title}</button>
   )
 }
 
